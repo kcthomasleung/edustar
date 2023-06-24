@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 import { useEffect } from 'react';
 import Link from 'next/link'
 import { NikeCard } from '../../components/3Dimension'
+import HeroComponent from '../../components/HeroComponent'
 
 export default function Home() {
 
@@ -25,9 +26,10 @@ useEffect(() => {
         <p>
         </p>
       </div>
-      <h2 className={styles.title}>
+      <HeroComponent/>
+      {/* <h2 className={styles.title}>
         Verified education <a href="">with blockchain</a>
-      </h2>
+      </h2> */}
 
       {/* <NikeCard/> */}
 
