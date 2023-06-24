@@ -25,3 +25,8 @@ To Search Courses:
 ```sh
 http://127.0.0.1:8000/search/search_text
 ```
+For Similarity Check:
+
+```sh
+http://127.0.0.1:8000/similarity/{id}/model_answer
+```
