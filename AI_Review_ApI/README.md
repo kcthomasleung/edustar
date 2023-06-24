@@ -14,8 +14,14 @@ Then:
 uvicorn main:app --reload
 ```
 
-Then:
+For Review Sentiment analysis:
 
 ```sh
 http://127.0.0.1:8000/review/review_text
+```
+
+To Search Courses:
+
+```sh
+http://127.0.0.1:8000/search/search_text
 ```
