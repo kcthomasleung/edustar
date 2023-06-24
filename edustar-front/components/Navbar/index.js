@@ -89,48 +89,10 @@ const Navbar = ({ post }) => {
   <nav className={styles.wrapper}>
     <ul className={styles.ul}>
       <Link href='/'>
-        EduStar
+        Edustar
         </Link>
-        {/* <Link href='/about'>
-      <a className={router.pathname == "/about" ? styles.active : styles.a}>
-          <User/>
-          <span className={styles.brief}>About</span>
-        </a>
-        </Link> */}
-        {/* {matches ? <Link href='/code'>
-      <a className={router.pathname == "/code" ? styles.active : styles.a}>
-          <Code/>
-          <span className={styles.brief}>Code</span>
-        </a>
-        </Link> : ''} */}
-        {/* <Link href='/projects'>
-      <a className={router.pathname == "/projects" ? styles.active : styles.a}>
-          <Folder/>
-          <span className={styles.brief}>Projects</span>
-        </a>
-        </Link>
-        <Link href='/posts'>
-      <a className={router.pathname == "/posts" ? styles.active : styles.a}>
-          <Book/>
-          <span className={styles.brief}>Posts</span>
-        </a>
-        </Link> */}
         <span className={styles.preBorder}/>
         <WalletConnectButton/>
-        {/* <a
-        scrollNav={scrollNav}
-        onClick={toggleHome} to='/' className={styles.a}>
-          <ArrowUpCircle/>
-          <span className={styles.brief}>Top</span>
-        </a> */}
-        {/* <Link href='/'>
-        Sign In
-          <span className={styles.brief}>Sign In</span>
-        </Link> */}
-        {/* <Link href='/'>
-        Register
-          <span className={styles.brief}>Register</span>
-        </Link> */}
       </ul>
      </nav>
      </header>
