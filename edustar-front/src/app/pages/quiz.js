@@ -3,9 +3,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Navbar from '../../components/Navbar'
-import Quiz from '../../components/Quiz/index'
-// import { ConnectButton } from '@rainbow-me/rainbowkit';
-
+import Quiz from '../../components/Quiz/inde'
 import { useTheme } from "next-themes";
 import { useEffect } from 'react';
 
@@ -21,18 +19,7 @@ useEffect(() => {
     <main className={styles.main}>
           <Navbar/>
 
-      <div className={styles.description}>
-        <p>
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-      </div>
-
-      {/* <div className={styles.center}> */}
-      {/* </div> */}
-      {/* <Navbar/> */}
-
       <div>
-        {/* <ConnectButton /> */}
         <Quiz/>
       </div>
     </main>
