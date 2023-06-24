@@ -1,31 +1,5 @@
-.header {
-  /* width: 80px; */
-  width: 100%;
-  /* height: 100vh; */
-  background-color: #ededed5c;
-  /* background-color: rgba(0, 0, 0, 0.043); */
-  /* border-right: 1px solid rgba(159, 37, 37, 0.627); */
-  z-index: 999;
-  position: fixed;
-  /* top: 0px; */
-  /* bottom: 0px; */
-  /* left: 0px; */
-  /* display: flex; */
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  /* flex-direction: column; */
-  /* gap: 96px; */
-  padding: 24px 0px 16px;
-  backdrop-filter: blur(16px);
-  user-select: none;
-}
 
-.headerMobile {
-  /* width: 80px; */
-  /* height: 100vh; */
-  /* background-color: var(--bgNav); */
+/* .headerMobile {
   border-right: 1px solid rgba(255, 255, 255, 0.04);
   z-index: 999;
   position: fixed;
@@ -42,7 +16,7 @@
   padding: 24px 0px 16px;
   backdrop-filter: blur(16px);
   user-select: none;
-}
+} */
 
 .header {
   user-select: none;
@@ -50,7 +24,8 @@
     width: 90%;
     /* width: fit-content; */
     /* width: 725px; */
-    /* background-color: rgba(0, 0, 0, 0.15); */
+    background-color: rgba(0, 0, 0, 0.02);
+    position: fixed;
     margin: 0 auto;
     margin-bottom: 1.5rem;
     /* background-color: rgba(0, 0, 0, 0.72); */
@@ -62,44 +37,21 @@
 
     inset: auto 0px 0px;
     /* padding: 16px 24px; */
+    backdrop-filter: blur(16px);
     padding: 0px 24px;
-}
-
-@media (max-width: 768px){
-.header {
-  user-select: none;
-    height: 70px;
-    width: 100%;
-    /* width: fit-content; */
-    width: 195px;
-    /* background-color: rgba(0, 0, 0, 0.15); */
-    /* margin: 0 auto; */
-    /* margin-bottom: 0em; */
-    /* background-color: rgba(0, 0, 0, 0.72); */
-    /* border-top: 1px solid rgba(255, 255, 255, 0.04); */
-    /* border-right: none; */
-    border: none;
-    /* box-shadow: none; */
-    /* border-radius: 0rem; */
-    /* border: 0.5px solid var(--activeBorder); */
-    /* box-shadow: 0px 0.5px 0.5px var(--activeBorder) inset, 0px -0.125px 1.25px var(--activeBorder) inset; */
-
-    inset: auto 0px 0px;
-    /* padding: 16px 24px; */
-    padding: 0px 24px;
-}
 }
 
 .wrapper {
   -webkit-box-flex: 1;
   flex-grow: 1;
-  display: flex;
+  /* display: flex; */
+  margin-top: 1rem;
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
   flex-direction: column;
-  gap: 8px;
+  /* gap: 8px; */
 }
 
 @media (min-width: 768px){
