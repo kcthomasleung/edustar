@@ -25,8 +25,11 @@ useEffect(() => {
         <p>
         </p>
       </div>
+      <h2 className={styles.title}>
+        Verified education <a href="">with blockchain</a>
+      </h2>
 
-      <NikeCard/>
+      {/* <NikeCard/> */}
 
       {/* <Link href="/quiz">
         <div className={styles.card}>
