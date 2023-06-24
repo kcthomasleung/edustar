@@ -1,0 +1,24 @@
+.circle {
+    background: var(--T);
+    color: var(--lightMode);
+    font-size: 0.85rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    float: right;
+    transition: transform 0.25s ease-in-out;
+    backdrop-filter: blur(12px);
+    transition: background-color 0.5s ease 0s, border-color 0.5s ease 0s;
+  }
+      
+     .circle:before {
+      padding: 0rem 0.65rem;
+      content: 'T';
+      font-weight: 500;
+      transform-origin: center center;
+      transition: transform 0.25s ease-in-out;
+    }
+  
+    .circle:hover {
+      cursor: pointer;
+      transform: scale(0.95);
+    }
