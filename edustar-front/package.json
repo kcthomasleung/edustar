@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "alchemy-sdk": "^2.9.1",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "next": "13.4.7",
