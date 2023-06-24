@@ -9,6 +9,7 @@ import styles from '../Navbar/styles.module.css'
 import ToggleTheme from '../Theme';
 import { useMediaQuery } from '@mui/material';
 import WalletConnectButton from '../Auth';
+import SparkleButton from '../Button';
 
 // const useMountEffect = fun => useEffect(fun, []);
 
@@ -93,6 +94,7 @@ const Navbar = ({ post }) => {
         </Link>
         <span className={styles.preBorder}/>
         <WalletConnectButton/>
+        {/* <SparkleButton/> */}
       </ul>
      </nav>
      </header>

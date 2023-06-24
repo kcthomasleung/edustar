@@ -1,9 +1,10 @@
 .walletConnectButton {
-    background-color: #2bd531;
+    background-color: #1bb420;
+    box-shadow: 0px 0.125px 0.5px #c8ffca inset, 0px 0.25px 0.5px #166419 inset;
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.5rem;
     cursor: pointer;
     font-size: 16px;
   }

@@ -7,6 +7,7 @@ import Quiz from '../../components/Quiz'
 import { useTheme } from "next-themes";
 import { useEffect } from 'react';
 import Link from 'next/link'
+import { NikeCard } from '../../components/3Dimension'
 
 export default function Home() {
 
@@ -25,12 +26,14 @@ useEffect(() => {
         </p>
       </div>
 
-      <Link href="/quiz">
+      <NikeCard/>
+
+      {/* <Link href="/quiz">
         <div className={styles.card}>
           <h2>Quiz &rarr;</h2>
           <p>Take a quiz to test your knowledge of the material.</p>
         </div>
-      </Link>
+      </Link> */}
 
       {/* <div className={styles.center}> */}
       {/* </div> */}
