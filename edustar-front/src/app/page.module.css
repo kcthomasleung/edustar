@@ -100,7 +100,7 @@
   content: '';
   left: 50%;
   position: absolute;
-  filter: blur(45px);
+  /* filter: blur(45px); */
   transform: translateZ(0);
 }
 
@@ -184,7 +184,7 @@
       rgba(var(--callout-rgb), 0.5)
     );
     background-clip: padding-box;
-    backdrop-filter: blur(24px);
+    /* backdrop-filter: blur(24px); */
   }
 
   .description div {
