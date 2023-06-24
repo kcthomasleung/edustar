@@ -8,6 +8,7 @@ import { Paperclip, Folder, Edit, Home, User, ArrowUpCircle, Zap, Cpu, Grid, Cod
 import styles from '../Navbar/styles.module.css'
 import ToggleTheme from '../Theme';
 import { useMediaQuery } from '@mui/material';
+import WalletConnectButton from '../Auth';
 
 // const useMountEffect = fun => useEffect(fun, []);
 
@@ -84,57 +85,14 @@ const Navbar = ({ post }) => {
 
   return (
     <>
-    <header className={styles.header}>
-    <nav isActive={isActive} className={styles.wrapper}>
-      <ul className={styles.ul}>
-      {/* <Link href='/'>
-          <Home/>
-          <span className={styles.brief}>Home</span>
-        </Link> */}
-        {/* <Link href='/about'>
-      <a className={router.pathname == "/about" ? styles.active : styles.a}>
-          <User/>
-          <span className={styles.brief}>About</span>
-        </a>
-        </Link> */}
-        {/* {matches ? <Link href='/code'>
-      <a className={router.pathname == "/code" ? styles.active : styles.a}>
-          <Code/>
-          <span className={styles.brief}>Code</span>
-        </a>
-        </Link> : ''} */}
-        {/* <Link href='/projects'>
-      <a className={router.pathname == "/projects" ? styles.active : styles.a}>
-          <Folder/>
-          <span className={styles.brief}>Projects</span>
-        </a>
+<header className={styles.header}>
+  <nav className={styles.wrapper}>
+    <ul className={styles.ul}>
+      <Link href='/'>
+        Edustar
         </Link>
-        <Link href='/posts'>
-      <a className={router.pathname == "/posts" ? styles.active : styles.a}>
-          <Book/>
-          <span className={styles.brief}>Posts</span>
-        </a>
-        </Link> */}
         <span className={styles.preBorder}/>
-        <span className={styles.a}>
-        <ToggleTheme>
-        </ToggleTheme>
-        <span className={styles.brief}>Theme</span>
-        </span>
-        <a
-        scrollNav={scrollNav}
-        onClick={toggleHome} to='/' className={styles.a}>
-          <ArrowUpCircle/>
-          <span className={styles.brief}>Top</span>
-        </a>
-        <Link href='/'>
-        Sign In
-          <span className={styles.brief}>Sign In</span>
-        </Link>
-        <Link href='/'>
-        Register
-          <span className={styles.brief}>Register</span>
-        </Link>
+        <WalletConnectButton/>
       </ul>
      </nav>
      </header>
