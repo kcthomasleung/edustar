@@ -2,20 +2,20 @@
   /* width: 80px; */
   width: 100%;
   /* height: 100vh; */
-  /* background-color: var(--bgNav); */
-  background-color: rgba(0, 0, 0, 0.043);
-  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  background-color: #ededed5c;
+  /* background-color: rgba(0, 0, 0, 0.043); */
+  /* border-right: 1px solid rgba(159, 37, 37, 0.627); */
   z-index: 999;
-  /* position: fixed; */
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  display: flex;
+  position: fixed;
+  /* top: 0px; */
+  /* bottom: 0px; */
+  /* left: 0px; */
+  /* display: flex; */
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  flex-direction: column;
+  /* flex-direction: column; */
   /* gap: 96px; */
   padding: 24px 0px 16px;
   backdrop-filter: blur(16px);
@@ -23,8 +23,8 @@
 }
 
 .headerMobile {
-  width: 80px;
-  height: 100vh;
+  /* width: 80px; */
+  /* height: 100vh; */
   /* background-color: var(--bgNav); */
   border-right: 1px solid rgba(255, 255, 255, 0.04);
   z-index: 999;
@@ -47,9 +47,9 @@
 .header {
   user-select: none;
     height: 80px;
-    /* width: 100%; */
+    width: 90%;
     /* width: fit-content; */
-    /* width: 225px; */
+    /* width: 725px; */
     /* background-color: rgba(0, 0, 0, 0.15); */
     margin: 0 auto;
     margin-bottom: 1.5rem;
@@ -58,7 +58,7 @@
     border-right: none;
     border-radius: 1rem;
     /* border: 0.5px solid var(--activeBorder); */
-    box-shadow: 0px 0.5px 0.5px var(--activeBorder) inset, 0px -0.125px 1.25px var(--activeBorder) inset;
+    box-shadow: 0px 0.5px 0.5px #b4b4b425 inset, 0px -0.125px 1.25px #a7a7a725 inset;
 
     inset: auto 0px 0px;
     /* padding: 16px 24px; */

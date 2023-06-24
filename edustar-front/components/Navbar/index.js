@@ -8,6 +8,7 @@ import { Paperclip, Folder, Edit, Home, User, ArrowUpCircle, Zap, Cpu, Grid, Cod
 import styles from '../Navbar/styles.module.css'
 import ToggleTheme from '../Theme';
 import { useMediaQuery } from '@mui/material';
+import WalletConnectButton from '../Auth';
 
 // const useMountEffect = fun => useEffect(fun, []);
 
@@ -87,10 +88,9 @@ const Navbar = ({ post }) => {
 <header className={styles.header}>
   <nav className={styles.wrapper}>
     <ul className={styles.ul}>
-      {/* <Link href='/'>
-          <Home/>
-          <span className={styles.brief}>Home</span>
-        </Link> */}
+      <Link href='/'>
+        EduStar
+        </Link>
         {/* <Link href='/about'>
       <a className={router.pathname == "/about" ? styles.active : styles.a}>
           <User/>
@@ -116,20 +116,21 @@ const Navbar = ({ post }) => {
         </a>
         </Link> */}
         <span className={styles.preBorder}/>
+        <WalletConnectButton/>
         {/* <a
         scrollNav={scrollNav}
         onClick={toggleHome} to='/' className={styles.a}>
           <ArrowUpCircle/>
           <span className={styles.brief}>Top</span>
         </a> */}
-        <Link href='/'>
+        {/* <Link href='/'>
         Sign In
           <span className={styles.brief}>Sign In</span>
-        </Link>
-        <Link href='/'>
+        </Link> */}
+        {/* <Link href='/'>
         Register
           <span className={styles.brief}>Register</span>
-        </Link>
+        </Link> */}
       </ul>
      </nav>
      </header>

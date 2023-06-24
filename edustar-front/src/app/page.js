@@ -16,7 +16,6 @@ useEffect(() => {
 
   return (
     <main className={styles.main}>
-              <Navbar/>
 
       <div className={styles.description}>
         <p>
@@ -44,6 +43,8 @@ useEffect(() => {
 
       {/* <div className={styles.center}> */}
       {/* </div> */}
+      <Navbar/>
+
 
       <div className={styles.grid}>
         <a
