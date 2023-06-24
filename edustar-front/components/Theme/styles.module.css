@@ -1,24 +1,39 @@
 .circle {
-    background: var(--T);
-    color: var(--lightMode);
-    font-size: 0.85rem;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    float: right;
-    transition: transform 0.25s ease-in-out;
-    backdrop-filter: blur(12px);
-    transition: background-color 0.5s ease 0s, border-color 0.5s ease 0s;
+  /* background: var(--T); */
+  /* color: var(--lightMode); */
+  /* font-size: 0.85rem; */
+  /* border-radius: 0.25rem; */
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  /* position: absolute; */
+  float: right;
+  /* transition: transform 0.25s ease-in-out;
+  transition: background-color 0.5s ease 0s, border-color 0.5s ease 0s; */
+}
+
+.circle svg {
+  color: none;
+  background: none;
+}
+
+.circle:hover {
+  filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.498));
+}
+    
+   .circle:before {
+    background: none;
+    color: none;
+    /* padding: 0rem 0.65rem; */
+    /* content: 'T'; */
+    /* font-weight: 500; */
+    /* transform-origin: center center; */
+    /* transition: transform 0.25s ease-in-out; */
   }
-      
-     .circle:before {
-      padding: 0rem 0.65rem;
-      content: 'T';
-      font-weight: 500;
-      transform-origin: center center;
-      transition: transform 0.25s ease-in-out;
-    }
-  
-    .circle:hover {
-      cursor: pointer;
-      transform: scale(0.95);
-    }
+
+  .circle:hover {
+    background: none;
+    color: none;
+    /* cursor: pointer; */
+    /* transform: scale(0.95); */
+  }

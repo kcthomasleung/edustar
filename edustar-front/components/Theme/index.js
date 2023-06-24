@@ -1,52 +1,43 @@
-import { useEffect, useState } from "react";
-import styledcomponents from 'styled-components'
-import styles from '../Theme/styles.module.css'
-import useKey from "../useKey"
+'use client'
 
-const ToggleThumb = styledcomponents.span`
-  transition: transform 0.25s ease-in-out;
-  transform: ${(p) =>
-    p.activeTheme === ""
-      ? "translate3d(calc(var(--toggle-width) - var(--toggle-height)), 0, 0)"
-      : "none"};
-`;
+import { useTheme } from "next-themes";
+import { Moon, Sun } from "react-feather";
+import { useEffect } from "react";
+import styles from "../Theme/styles.module.css";
+import Cookies from 'js-cookie';
 
 const ToggleTheme = () => {
-    const [activeTheme, setActiveTheme] = useState('')
-    const inactiveTheme = activeTheme === 'dark' ? 'light' : 'dark' 
+  const { theme, setTheme } = useTheme();
 
-    useEffect(() => {
-      const savedTheme = JSON.parse(localStorage.getItem('current-theme'))
-    if (savedTheme) {
-      setActiveTheme(savedTheme)
-      }
-    }, [])
-    
-    useEffect(() => {
-      localStorage.setItem(
-        'current-theme',
-        JSON.stringify(activeTheme)
-      )
-    }, [activeTheme])
+  useEffect(() => {
+    // Update the body's data-theme attribute
+    document.body.dataset.theme = theme;
+  }, [theme]);
 
-    useEffect(() => {
-        document.body.dataset.theme = activeTheme;
-    }, [activeTheme])
-    
-
-    const handleToggle = (e) => {
-        setActiveTheme(inactiveTheme)
-        e.preventDefault();
-    }
-
-    useKey("KeyT", handleToggle)
+  const handleToggle = () => {
+    // Toggle between light and dark theme
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    Cookies.set('theme', newTheme); // Save theme preference in a cookie
+  };
 
   return (
-    <ToggleThumb className={styles.circle} type="button"
-    onKeyDown={(e)=> handleToggle(e)}
-    onClick={(e)=> handleToggle(e)}>
-    </ToggleThumb>
+    <span>
+      {theme === "light" ? (
+        <Moon
+          className={styles.circle}
+          type="button"
+          onClick={handleToggle}
+        />
+      ) : (
+        <Sun
+          className={styles.circle}
+          type="button"
+          onClick={handleToggle}
+        />
+      )}
+    </span>
   );
-}
+};
 
 export default ToggleTheme;

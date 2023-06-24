@@ -87,16 +87,10 @@ const Navbar = ({ post }) => {
     <header className={styles.header}>
     <nav isActive={isActive} className={styles.wrapper}>
       <ul className={styles.ul}>
-      <Link href='/'>
+      {/* <Link href='/'>
           <Home/>
           <span className={styles.brief}>Home</span>
-        </Link>
-        <Link href='/'>
-          <span className={styles.brief}>Sign In</span>
-        </Link>
-        <Link href='/'>
-          <span className={styles.brief}>Register</span>
-        </Link>
+        </Link> */}
         {/* <Link href='/about'>
       <a className={router.pathname == "/about" ? styles.active : styles.a}>
           <User/>
@@ -133,6 +127,14 @@ const Navbar = ({ post }) => {
           <ArrowUpCircle/>
           <span className={styles.brief}>Top</span>
         </a>
+        <Link href='/'>
+        Sign In
+          <span className={styles.brief}>Sign In</span>
+        </Link>
+        <Link href='/'>
+        Register
+          <span className={styles.brief}>Register</span>
+        </Link>
       </ul>
      </nav>
      </header>
