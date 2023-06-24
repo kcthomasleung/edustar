@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styledcomponents from 'styled-components'
-import styles from '../ToggleThemes/styles.module.css'
-import useKey from "../useKey";
+import styles from '../Theme/styles.module.css'
+import useKey from "../useKey"
 
 const ToggleThumb = styledcomponents.span`
   transition: transform 0.25s ease-in-out;
