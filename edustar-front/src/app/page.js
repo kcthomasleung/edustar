@@ -17,10 +17,10 @@ useEffect(() => {
 
   return (
     <main className={styles.main}>
+          <Navbar/>
 
       <div className={styles.description}>
         <p>
-          <Navbar/>
           <code className={styles.code}>src/app/page.js</code>
         </p>
       </div>
