@@ -6,7 +6,6 @@ import Navbar from '../../components/Navbar'
 import Quiz from '../../components/Quiz'
 import { useTheme } from "next-themes";
 import { useEffect } from 'react';
-import Link from 'next/link'
 
 export default function Home() {
 
@@ -20,23 +19,8 @@ useEffect(() => {
     <main className={styles.main}>
           <Navbar/>
 
-      <div className={styles.description}>
-        <p>
-        </p>
-      </div>
-
-      <Link href="/quiz">
-        <div className={styles.card}>
-          <h2>Quiz &rarr;</h2>
-          <p>Take a quiz to test your knowledge of the material.</p>
-        </div>
-      </Link>
-
-      {/* <div className={styles.center}> */}
-      {/* </div> */}
-      {/* <Navbar/> */}
-
       <div>
+        <Quiz/>
       </div>
     </main>
   )
