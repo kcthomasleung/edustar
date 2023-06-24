@@ -19,14 +19,14 @@ useEffect(() => {
 
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
+          <Navbar/>
           <code className={styles.code}>src/app/page.js</code>
         </p>
       </div>
 
       {/* <div className={styles.center}> */}
       {/* </div> */}
-      <Navbar/>
+      {/* <Navbar/> */}
 
 
       <div className={styles.grid}>
