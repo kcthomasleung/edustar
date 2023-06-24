@@ -88,10 +88,14 @@ const Navbar = ({ post }) => {
     <nav isActive={isActive} className={styles.wrapper}>
       <ul className={styles.ul}>
       <Link href='/'>
-      {/* <a className={router.pathname == "/page" ? styles.active : styles.a}> */}
           <Home/>
           <span className={styles.brief}>Home</span>
-        {/* </a> */}
+        </Link>
+        <Link href='/'>
+          <span className={styles.brief}>Sign In</span>
+        </Link>
+        <Link href='/'>
+          <span className={styles.brief}>Register</span>
         </Link>
         {/* <Link href='/about'>
       <a className={router.pathname == "/about" ? styles.active : styles.a}>
