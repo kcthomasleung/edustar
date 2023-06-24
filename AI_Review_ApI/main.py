@@ -5,13 +5,19 @@ import torch
 import pandas as pd
 
 
-embedder = SentenceTransformer('distiluse-base-multilingual-cased-v1')
+embedder = SentenceTransformer('all-MiniLM-L6-v2')
 from transformers import pipeline
 sentiment_pipeline = pipeline("sentiment-analysis")
 
 df = pd.read_csv("coursea_data.csv")
+qa = pd.read_csv("qa.csv", header=None)
+
 corpus = df.iloc[:,1].to_list()
 corpus_embeddings = embedder.encode(corpus, convert_to_tensor=True)
+
+
+
+model = SentenceTransformer('multi-qa-MiniLM-L6-cos-v1')
 
 
 def review(text):
@@ -36,6 +42,16 @@ def search(text):
     
 
 
+def similarity_check(k,text):
+
+    sentences1 = text
+    sentences2 = [qa.iloc[k,0]]
+    embeddings1 = model.encode(sentences1, convert_to_tensor=True)
+    embeddings2 = model.encode(sentences2, convert_to_tensor=True)
+    cosine_scores = util.cos_sim(embeddings1, embeddings2)
+    return float(cosine_scores[0][0])
+
+
 
 app = FastAPI()
 
@@ -54,3 +70,8 @@ def read_item(text: Union[str, None] = None):
 @app.get("/search/{text}")
 def read_item(text: Union[str, None] = None):
     return search(text)
+
+
+@app.get("/similarity/{id}/{text}")
+def read_item(id:int ,text: Union[str, None] = None):
+    return similarity_check(id, text)
