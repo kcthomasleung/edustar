@@ -1,4 +1,4 @@
-Python AI Review API
+Python AI Automated Grading & Feedback API
 
 
 #Usage
