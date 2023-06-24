@@ -27,7 +27,7 @@
     background-color: rgba(0, 0, 0, 0.02);
     position: fixed;
     margin: 0 auto;
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     /* background-color: rgba(0, 0, 0, 0.72); */
     /* border-top: 1px solid rgba(255, 255, 255, 0.04); */
     border-right: none;
@@ -42,14 +42,16 @@
 }
 
 .wrapper {
-  -webkit-box-flex: 1;
-  flex-grow: 1;
+  /* -webkit-box-flex: 1; */
+  /* flex-grow: 1; */
   /* display: flex; */
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  margin: 0 auto;
+  top: 50%;
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: justify;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-direction: column;
   /* gap: 8px; */
 }
