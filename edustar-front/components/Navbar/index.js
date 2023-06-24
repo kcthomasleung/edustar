@@ -84,9 +84,9 @@ const Navbar = ({ post }) => {
 
   return (
     <>
-    <header className={styles.header}>
-    <nav isActive={isActive} className={styles.wrapper}>
-      <ul className={styles.ul}>
+<header className={styles.header}>
+  <nav className={styles.wrapper}>
+    <ul className={styles.ul}>
       {/* <Link href='/'>
           <Home/>
           <span className={styles.brief}>Home</span>
@@ -116,17 +116,12 @@ const Navbar = ({ post }) => {
         </a>
         </Link> */}
         <span className={styles.preBorder}/>
-        <span className={styles.a}>
-        <ToggleTheme>
-        </ToggleTheme>
-        <span className={styles.brief}>Theme</span>
-        </span>
-        <a
+        {/* <a
         scrollNav={scrollNav}
         onClick={toggleHome} to='/' className={styles.a}>
           <ArrowUpCircle/>
           <span className={styles.brief}>Top</span>
-        </a>
+        </a> */}
         <Link href='/'>
         Sign In
           <span className={styles.brief}>Sign In</span>

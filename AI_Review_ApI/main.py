@@ -5,7 +5,7 @@ import torch
 import pandas as pd
 
 
-embedder = SentenceTransformer('all-MiniLM-L6-v2')
+embedder = SentenceTransformer('distiluse-base-multilingual-cased-v1')
 from transformers import pipeline
 sentiment_pipeline = pipeline("sentiment-analysis")
 
