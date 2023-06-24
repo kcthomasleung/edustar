@@ -1,11 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721sol";
 
 contract BasicNft is ERC721 {
     string public constant TOKEN_URI =
-        "ipfs://bafybeig37ioir76s7mg5oobetncojcm3c3hxasyd4rvid4jqhy4gkaheg4/?filename=0-PUG.json";
+        //  "ipfs://bafybeig37ioir76s7mg5oobetncojcm3c3hxasyd4rvid4jqhy4gkaheg4/?filename=0-PUG.json";
+        // "ipfs.io/ipfs/QmR1pDM4JjyxLVeLkLGjiHFjpyBuGaLahGnu1HNH6DDYNW?filename=certificate.png";
+        "https://ipfs.io/ipfs/QmTQdUBXeD3g5SjJKYqD4VyLwTY3SzaqvagiFrqm6Tov2Z?filename=certificate.json";
     uint256 private s_tokenCounter;
 
     event DogMinted(uint256 indexed tokenId);
