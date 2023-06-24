@@ -1,10 +1,12 @@
+'use client'
+
 import React, { useState, useEffect } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import Link from 'next/dist/client/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { Paperclip, Folder, Edit, Home, User, ArrowUpCircle, Zap, Cpu, Grid, Code, Book } from 'react-feather'
-import styles from '../NavbarFull/styles.module.css'
-import ToggleTheme from '../../Toggle/Theme/ToggleThemesMobile';
+import styles from '../Navbar/styles.module.css'
+import ToggleTheme from '../Theme';
 import { useMediaQuery } from '@mui/material';
 
 // const useMountEffect = fun => useEffect(fun, []);
@@ -86,10 +88,10 @@ const Navbar = ({ post }) => {
     <nav isActive={isActive} className={styles.wrapper}>
       <ul className={styles.ul}>
       <Link href='/'>
-      <a className={router.pathname == "/" ? styles.active : styles.a}>
+      {/* <a className={router.pathname == "/page" ? styles.active : styles.a}> */}
           <Home/>
           <span className={styles.brief}>Home</span>
-        </a>
+        {/* </a> */}
         </Link>
         {/* <Link href='/about'>
       <a className={router.pathname == "/about" ? styles.active : styles.a}>
