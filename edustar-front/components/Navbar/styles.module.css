@@ -1,5 +1,5 @@
 .header {
-    width: 80px;
+    width: 180px;
     height: 100vh;
     background-color: var(--bgNav);
     border-right: 1px solid rgba(255, 255, 255, 0.04);
@@ -21,7 +21,7 @@
   }
   
   .headerMobile {
-    width: 80px;
+    width: 180px;
     height: 100vh;
     /* background-color: var(--bgNav); */
     border-right: 1px solid rgba(255, 255, 255, 0.04);
@@ -46,8 +46,8 @@
     user-select: none;
       height: 80px;
       /* width: 100%; */
-      width: fit-content;
-      width: 225px;
+      /* width: fit-content; */
+      width: 525px;
       /* background-color: rgba(0, 0, 0, 0.15); */
       margin: 0 auto;
       margin-bottom: 1.5rem;

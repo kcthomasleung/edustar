@@ -1,8 +1,16 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Navbar from '../../components/Navbar'
+import { useTheme } from "next-themes";
 
 export default function Home() {
+
+  const { theme, setTheme } = useTheme();
+
+useEffect(() => {
+  document.body.dataset.theme = theme;
+}, []);
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -29,9 +37,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.center}>
+      {/* <div className={styles.center}> */}
         <Navbar/>
-      </div>
+      {/* </div> */}
 
       <div className={styles.grid}>
         <a
