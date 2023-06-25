@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sentence_transformers import SentenceTransformer, util
 import torch
+import json
 import pandas as pd
 
 
@@ -36,7 +37,7 @@ def search(text):
         for score, idx in zip(top_results[0], top_results[1]):
             idxs.append(int(idx))
 
-    return df.iloc[idxs, :].to_json(orient='records', lines=True)
+    return json.loads(df.iloc[idxs,:].to_json( orient='records'))
 
 
 def similarity_check(k, text):
