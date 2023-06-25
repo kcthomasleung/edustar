@@ -1,0 +1,534 @@
+html,
+body {
+  /* font-feature-settings: "kern","frac","kern",""; */
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.5s ease 0s, border-color 0.5s ease 0s;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  line-height: calc(1em + 0.725rem);
+  /* letter-spacing: -0.01em; */
+  height: 100%;
+  background: var(--bg);
+  /* line-height: 1.5rem; */
+  font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  /* font-family: Satoshi,Helvetica Neue,Helvetica,Arial,sans-serif; */
+  /* font-family: "Inter var",sans-serif,-system-ui; */
+  /* font-family: Manrope,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif; */
+  /* font-family: var(--fonts-sans); */
+  /* font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif; */
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+}
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background: var(--bg);
+  }
+} */
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+  border: none;
+  padding: 0;
+}
+
+section {
+
+}
+
+.hidden {
+  transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+} 
+
+.show {
+  opacity: 1;
+}
+
+::selection {
+  background: var(--selection);
+  color: var(--selectiontext);
+  /* color: var(--herobgtext); */
+}
+
+html {
+  /* display: block; */
+}
+
+header {
+  /* display: block; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* a:hover {
+	text-decoration: underline 1px solid var(--link);
+} */
+
+* {
+  /* cursor: none; */
+  --primary-glow: radial-gradient (Orgba(1, 65, 255, 0.4), Orgba(1, 65, 255, 0));
+-secondary-glow: linear-gradient ( to bottom right,
+• Orgba (1, 65, 255, 0),
+•Orgba (1, 65, 255, 0),
+• Orgba (1, 65, 255, 0.4));
+  --cursorX: 5vw;
+  --cursorY: 5vh;
+  --cursor-y: 0;
+  /* --cursor-x: 0; */
+  --hue-rotate: 80deg;
+  --left-1: 5rem;
+  --fonts-sans: "Inter",sans-serif,-system-ui;
+  --fonts-mono: SFMono-Regular,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  mix-blend-mode: normal;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 768px) {
+:root {
+    --font-size: 14px;
+}
+} 
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi) {
+:root {
+    --font-size: 18px;
+}
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  overflow-wrap: break-word;
+}
+
+/* h1 {
+  color: var();
+} */
+
+.circle {
+  flex-shrink: 0;
+  border-radius: 25px;
+  background-color: rgb(201, 156, 96);
+  width: 100px;
+  height: 100px;
+  display: flex;
+margin: 0 auto;
+background: linear-gradient(180deg, #dadbff 0%, #6c72ea 100%);
+mix-blend-mode: normal;
+box-shadow: 0px 4px 4px rgba(47, 47, 47, 0.25);
+  border-radius: 1.5rem;
+  transition: background-color 0.5s ease 0s, border-color 0.5s ease 0s;
+  /* height: 50px; */
+  /* border-radius: 50%; */
+  overflow: hidden;
+  position: relative;
+  cursor: none;
+}
+
+.circle span {
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 0 auto;
+  margin-top: 28px;
+      background: linear-gradient(10deg, #282b7d 0%, rgb(117, 117, 255) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+}
+
+.inner {
+  z-index: 5;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 10vmax at var(--cursorX) var(--cursorY),
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,.95) 100%
+  )
+}
+
+
+body[data-theme=light] {
+  --outer: #00000009;
+  --icons: #ffffff;
+  --projectLinks: linear-gradient(90deg, rgb(85, 85, 85) 0%, rgb(80, 80, 80) 25%, rgb(57, 57, 57) 50%, rgb(19, 19, 19) 75%, rgb(0, 0, 0) 100%);
+  --search: #e1e1e1;
+  --invertB: hue-rotate(508deg);
+  --iconbg: radial-gradient(ellipse closest-side, rgb(255, 255, 255) 60%, rgb(245, 245, 245) 100%);
+  --bound: linear-gradient(135deg,#ffffff,#f0f0f0);
+  --palette: linear-gradient(135deg,#eeeeee,#f1f1f1);
+  --arrow: brightness(120%);
+  --boxWaterColour: #ffffffd0;
+  --comment: #A6A6A6;
+  --punctuation: #FF5B5B;
+  --property: #FF5B5B;
+  --selector: #FF5B5B;
+  --operator: #FF5B5B;
+  --atrule: #FF5B5B;
+  --regex: #FF5B5B;
+  
+  --figma: #659eff;
+  
+
+  --headTone: #000;
+
+  --pulseOne: hsla(0,0%,100%,.25);
+  --pulseTwo: hsla(0, 0%, 60%, 0.04);
+  --pulseThree: hsla(0,0%,100%,0);
+
+  --selection: rgba(168, 183, 255, 0.275);
+  /* --selection: #12182200; */
+  /* --selectiontext: #000000; */
+  
+  --gridpaper:
+  linear-gradient(-90deg, #1f1f212c 1px, transparent 1px),
+  linear-gradient(rgba(88, 88, 88, 0.05) 1px, transparent 1px), 
+  linear-gradient(-90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+  linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+  linear-gradient(transparent 3px, #141415 3px, #141415 78px, transparent 78px),
+  linear-gradient(-90deg, rgb(47, 47, 47) 1px, transparent 1px),
+  linear-gradient(-90deg, transparent 3px, #141415 3px, #141415 78px, transparent 78px),
+  linear-gradient(rgb(47, 47, 47) 1px, transparent 1px),
+  #161616;
+  --background-position: calc(50% + 190px) -50px;
+	--background-image: url('/azelf.png');
+	--background-repeat: no-repeat;
+	--background-size: 1000px 700px;
+  --codeblock-bg: rgba(0, 0, 0, 0.012);
+  --invert: invert(100%);
+  --brief-nav-bg: rgb(240, 240, 240);
+  --a-nav-c: #979797;
+  --a-nav-bg: rgba(0, 0, 0, 0.05);
+  --grayscale: grayscale(1); 
+  /* --brightness: brightness(0.75);  */
+  /* --datebg: #edf1ff;
+  --datetext: #4C6DE5; */
+  --datebg: rgba(125, 116, 255, 0.1);
+  --datetext: #7b74ff;
+  --soonbg: rgba(255,116,116,0.1);
+  --soontext: #ff7474;
+
+  --dateborder: #e2e8ff;
+  --soonborder: #ffe3ea;
+
+  --codebg: rgb(244, 244, 244);
+  --overhead: -webkit-linear-gradient(rgb(18, 18, 18), rgb(35, 35, 35));
+  --theme: linear-gradient(180deg, #000000 0%, #7c7c7c 100%);
+  --abouttext: rgb(50, 50, 50);
+  --dots: linear-gradient(90deg,#050505 15px,transparent 1%) 50%,linear-gradient(#050505 15px,transparent 1%) 50%,hsla(0,0%,100%,.16) 16px 16px;
+  /* --headlineColour: hsl(0, 0%, 9.0%); */
+  --headlineColour: #11263B;
+  --contactColour: #8d8d8d;
+  --contactBg: rgba(238, 238, 238, 0.5);
+  --posttext: rgba(68, 68, 68, 0.65);
+  --font-size: 14px;
+  /* --npm: radial-gradient(45% 100% at 50% 50%, #ffffff 30%, rgb(255, 255, 255) 100%);
+  --npmText: #1e1e1e; */
+
+  --npm: #EFEFEF; /* set your desired background color for light mode */
+  --npm-dark: #2E2E2E; /* set your desired background color for dark mode */
+  --npmText: #000000;
+  --npmBorder: #e4e4e4;
+  /* --npmShadow: rgba(214, 214, 214, 0.3); */
+
+  /* --lightMode: #11263B; */
+  --borderLM: #dfdfdf;
+  /* --lightMode: #a0b2e6; */
+  --bg: #ffffff;
+  --bgPosts: rgba(0, 0, 0, 0.05);
+  --index: rgba(0, 0, 0, 0.15);
+  --indexNav: rgba(0, 0, 0, 0.15);
+  --indexOuter: rgba(0, 0, 0, 0);
+  /* --bg: #ffffff; */
+  --linkButton: #efefef;
+  --regularweight: 555;
+  --mediumweight: 425;
+  --semiweight: 425;
+  letter-spacing: -.016em;
+  --purple: #3700ff;
+  --purple-light: #3700ff;
+  /* --link: #00a2ff; */
+  --link: linear-gradient(130deg,#659eff,#659eff 50%,#659eff 90%);
+  --titleGradient: linear-gradient(130deg,#000000,#000000 50%);
+
+
+    /* --link: #5a29d5; */
+  --ghlower: #e4e4e4;
+  --ghupper: rgb(159, 159, 159);
+  --lightMode: #000000;
+  --textFirstColor:  rgb(51, 129, 238);
+  --textSecondColor: #646fcb;
+
+  --frontend: #ff9595;  
+  --badgecolor: #F24C4C;
+  --badgebgcolor: #ffe7e7;
+
+  --herobg: #f5f9ff40;
+  --herobgtext: #1f3352;
+  --herobgring: #3b83f630;
+
+  --projectbg: rgb(255, 246, 246);
+  --projectbgtext: #5038af;
+  --projectbgring: #7d3bf630;
+
+  --divider-work: 1px solid rgba(0,0,0,.03);
+  --divider-nav: 1px solid rgba(0, 0, 0, 0.1);
+  --divider-brief: 1px solid rgba(0, 0, 0, 0.015);
+
+  --space-16: 1rem;
+  --space-40: 1.5rem;
+
+  --shadow-upper: 0 0px 2.5px rgba(0, 0, 0, 0.25);
+  --shadow-all: 0 0px 10px rgba(0, 0, 0, 0.15);
+
+  --colorCmd: #515151;
+  --bgCmd: #ffffff;
+
+  --bgForLinks: #72adff;
+  --defaultBorder: rgb(243,246,246);
+
+  --shine: linear-gradient(to bottom, rgba(236, 236, 236, 0.765), rgba(235, 235, 235, 0.5) 50%, rgba(190, 190, 190, 0.344));
+  --dropbox-color: rgb(255, 255, 255);
+  --T: #cbcbcb55;
+  --hover-toggle: #ffffff7a;
+
+  --line-toggle: #ebebeb;
+  --navbar-border: #2828281e;
+  --borderMakes: hsl(0, 0%, 90%);
+  --containerMakes: hsl(0, 0%, 98%);
+  --indicator: #000000;
+  --lineOpacity: 0.25;
+  --circleMakes: #000000;
+  --polylineMakes: #004cff;
+  --activeBorder: #9a9a9a25;
+  --bgNav: #ededed5c;
+  --builds: rgb(12, 12, 12);
+  --buildsBg: linear-gradient(180deg, #fafafa 0%, #fafafa 100%);
+}
+
+body[data-theme=dark] {
+  --buildsBg: linear-gradient(180deg, #000000 0%, #0d0d0d 100%);
+  --icons: rgb(30, 30, 30);
+  --projectLinks: linear-gradient(90deg, rgba(193,193,193,1) 0%, rgba(194,194,194,1) 25%, rgba(204,204,204,1) 50%, rgba(247,247,247,1) 75%, rgb(255, 255, 255) 100%);
+  --search: #4b4b4b;
+  --invertB: invert(0%);
+  --iconbg: radial-gradient(ellipse closest-side, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
+  --bound: linear-gradient(135deg,#232323,#171717);
+  --palette: linear-gradient(135deg,#151515,#1f1f1f);
+--boxWaterColour: rgba(30, 30, 30, 0.846);
+  /* --comment: #5D5C5C;
+  --punctuation: #EBCCB9;
+  --property: #F9D9C9;
+  --selector: #F0D7C1;
+  --operator: #F1F1F1;
+  --atrule: #E6D7B8;
+  --regex: #C6C6C6; */
+
+  --headTone: rgb(151, 151, 151);
+--arrow: brightness(300%);
+  --comment: #b6a77f;
+--punctuation: #e3a7a7;
+--property: #d8b38f;
+--selector: #ffbadd;
+/* --selector: #8e64ff; */
+--operator: #5B6165;
+--atrule: #fe799a;
+/* --atrule: #f92672; */
+--regex: #5B6165;
+
+--pulseOne: hsla(0, 0%, 20%, 0.07);
+--pulseTwo: hsla(0, 0%, 20%, 0.26);
+--pulseThree: hsla(0, 0%, 100%, 0.051);
+
+  /* --selection: #2e2e2e9e; */
+  --selection: #121822;
+  --selectiontext: #83bae6;
+  
+  --navbar-border: #ffffff10;
+  --gridpaper:
+  linear-gradient(-90deg, rgba(0,0,0,.05) 1px, transparent 1px),
+  linear-gradient(rgba(0,0,0,.05) 1px, transparent 1px), 
+  linear-gradient(-90deg, rgba(0, 0, 0, .04) 1px, transparent 1px),
+  linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+  linear-gradient(transparent 3px, #f2f2f2 3px, #f2f2f2 78px, transparent 78px),
+  linear-gradient(-90deg, #aaa 1px, transparent 1px),
+  linear-gradient(-90deg, transparent 3px, #f2f2f2 3px, #f2f2f2 78px, transparent 78px),
+  linear-gradient(#aaa 1px, transparent 1px),
+  #f2f2f2;
+  --background-position: 0;
+	--background-image: ;
+	--background-repeat: ;
+	--background-size: ;
+  --codeblock-bg: #ffffff05;
+  --borderHeading: rgb(146,189,239);
+  --invert: invert(0%);
+  --imagefiltering: contrast(120%);
+  --brief-nav-bg: #242424;
+  /* --a-nav-c: rgba(240, 237, 255, 0.852); */
+  --a-nav-c: #9b9b9b;
+  /* --a-nav-bg: rgba(240, 237, 255, 0.÷1); */
+  --a-nav-bg: #242424a0;
+  --grayscale: grayscale(1); 
+  --datebg: #111525;
+  --datetext: #4C6DE5;
+  --dateborder: #2f3a6560;
+  --soonbg: #251117;
+  --soontext: #e54c68;
+  --soonborder: #72333f60;
+  --codebg: #050505;
+  --overhead: -webkit-linear-gradient(#eee, rgb(200, 200, 200));
+  --theme: linear-gradient(180deg, #FFFFFF 0%, #858585 100%);
+  --abouttext: rgb(163 163 163);
+  --dots: linear-gradient(90deg,#050505 15px,transparent 1%) 50%,linear-gradient(#050505 15px,transparent 1%) 50%,hsla(0,0%,100%,.16) 16px 16px;
+  /* --headlineColour: hsl(0, 0%, 93.0%);  */
+  --headlineColour: #f5f8ff;
+  --contactColour: #acacac;
+  --contactBg: #181818;
+  --posttext: #b7b7b7;
+  --font-size: 14px;
+  /* --lightMode: #f5f8ff; */
+  /* --lightMode: hsl(0, 0%, 93.0%); */
+  --lightMode: #ededed;
+  /* --npm: #191919;
+  --npmText: #dddddd; */
+
+  --npm: #151515; /* set your desired background color for light mode */
+  --npm-dark: #2E2E2E; /* set your desired background color for dark mode */
+  --npmText: #ffffff;
+  /* --npmShadow: rgba(25, 25, 25, 0.3); */
+  --npmBorder: rgba(228, 228, 228, 0.2);
+  --npmBorderHover: rgba(228, 228, 228, 0.7);
+  --borderLM: #f5f8ff;
+  /* --bg: #010312; */
+  --bg: rgb(12, 12, 12);
+  --bgPosts: rgba(255, 255, 255, 0.025);
+  /* --bg: rgb(9, 9, 9); */
+  /* --bg: hsl(0, 0%, 5.5%); */
+  /* --bg: hsl(0, 0%, 2.75%); */
+  /* --bg: #0c0c0f; */
+
+  --figma: #e5c1ff;
+
+  /* --bg: rgb(9, 9, 14); */
+  --indexOuter: rgba(255, 255, 255, 0);
+  --index: rgba(255, 255, 255, 0.08);
+  --indexNav: rgba(255, 255, 255, 0.15);
+  --regularweight: 555;
+  --mediumweight: 425;
+  --semiweight: 425;
+  letter-spacing: -.016em;
+  --purple: #d1c2ff;
+  --purple-light: #3700ff;
+  /* --link: #3bf692; */
+  --link: linear-gradient(130deg,#fbc2eb,#e6e2ff 50%,#a6c1ee 90%);
+  --titleGradient: linear-gradient(130deg,#fbc2eb,#e6e2ff 50%,#a6c1ee 90%);
+
+  /* --link: #00ff6a;  */
+  --ghlower: #3f3f3f;
+  --ghupper: rgb(91, 91, 91);
+
+  --frontend: #ff9595;  
+  --badgecolor: #973e3e;
+  --badgebgcolor: #ffe7e7;
+  
+  --textFirstColor:  rgb(82, 238, 51);
+  --textSecondColor: #6ecb64;
+
+  --herobg: #19181b40;
+  --herobgtext: #f6e0e0;
+  --herobgring: #5b5b5b8f;
+
+  --divider-work: 1px solid rgba(255, 255, 255, 0.12);
+  --divider-nav:  1px solid rgba(255, 255, 255, 0.12);
+  --divider-brief: 1px solid rgba(255, 255, 255, 0.04);
+
+  --space-16: 1rem;
+  --space-40: 1.5rem;
+
+  --shadow-upper: 0 0px 5px rgba(0, 0, 0, 0.15);
+  --shadow-all: 0 0px 10px rgba(0, 0, 0, 1);
+
+  --colorCmd: #cbcbcb;
+  --bgCmd: #181818;
+
+  --bgForLinks: #3bf692;
+
+  --defaultBorder: rgb(17, 17, 17);
+
+  --shine: linear-gradient(to bottom, rgba(217, 217, 217, 0.765), rgba(55, 55, 55, 0.5) 50%, rgba(202, 202, 202, 0.344));
+
+  --dropbox-color: #151515;
+  --T: #15151755;
+  --hover-toggle: #f6e0e005;
+
+  --line-toggle: #232127;
+  --borderMakes: hsla(0, 0%, 20%, 0.404);
+  --containerMakes: hsl(0, 0%, 7%);
+  --indicator: #ffffff;
+  --lineOpacity: 1;
+  --circleMakes: #ffffff;
+  --polylineMakes: #ffffff;
+  --activeBorder: #ffffff25;
+  --bgNav: #1b1b1b5c;
+}
+
+/* colors:root{
+  --purpleCode: #C082BB
+} */
+
+body[data-theme=bound] {
+  --lightMode: #f5f8ff;
+  --npm: #f5f8ff;
+  --npmText: #000000;
+  --bg: #010014;
+}
+
+:root {
+  --space-16: 1rem;
+  --space-40: 1.5rem;
+  --outer: #ffffff0a;
+  --icons: rgb(30, 30, 30);
+  --borderLM: #f5f8ff;
+  --indexOuter: rgba(255, 255, 255, 0);
+  --index: rgba(255, 255, 255, 0.08);
+  /* --bg: rgb(12, 12, 12); */
+  --bgPosts: rgba(255, 255, 255, 0.025);
+  --lightMode: #ededed;
+  --figma: #e5c1ff;
+  --link: linear-gradient(130deg,#fbc2eb,#e6e2ff 50%,#a6c1ee 90%);
+  --indexNav: rgba(255, 255, 255, 0.15);
+  --regularweight: 555;
+  --mediumweight: 425;
+  --semiweight: 425;
+  letter-spacing: -.016em;
+  --divider-work: 1px solid rgba(255, 255, 255, 0.12);
+  --divider-nav:  1px solid rgba(255, 255, 255, 0.12);
+  --divider-brief: 1px solid rgba(255, 255, 255, 0.04);
+  --brief-nav-bg: #202022;
+  --a-nav-c: rgba(240, 237, 255, 0.852);
+  --a-nav-bg: rgba(240, 237, 255, 0.1);
+  --builds: rgb(240, 237, 255);
+}
+
+/* :root {
+  --containerMakes: #c70f0f; /* Define the value of --containerMakes */
