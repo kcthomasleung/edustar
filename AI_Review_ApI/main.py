@@ -55,6 +55,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Update this list with your specific domain(s)
     allow_methods=["GET"],
+    # allow_methods=["POST"],
     allow_headers=["*"],
 )
 
