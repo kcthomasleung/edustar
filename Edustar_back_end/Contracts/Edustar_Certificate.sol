@@ -2,7 +2,6 @@
 pragma solidity ^0.8.7;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-
 contract EdustarCertificate is ERC721 {
     string public constant TOKEN_URI =
         "https://ipfs.io/ipfs/QmTQdUBXeD3g5SjJKYqD4VyLwTY3SzaqvagiFrqm6Tov2Z?filename=certificate.json";
@@ -27,5 +26,18 @@ contract EdustarCertificate is ERC721 {
 
     function getTokenCounter() public view returns (uint256) {
         return s_tokenCounter;
+    }
+
+    // Override transfer functions to make tokens non-transferable
+    function safeTransferFrom(address from, address to, uint256 tokenId) public virtual override {
+        revert("Transfer not allowed");
+    }
+
+    function transferFrom(address from, address to, uint256 tokenId) public virtual override {
+        revert("Transfer not allowed");
+    }
+
+    function approve(address to, uint256 tokenId) public virtual override {
+        revert("Approval not allowed");
     }
 }
