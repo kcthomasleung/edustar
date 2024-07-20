@@ -10,13 +10,13 @@ client = OpenAI()
 
 
 bot_image = Image.open(
-    "/Users/thomasleung/Documents/GitHub/edustar/Edustar_back_end/streamlit/img/sparkling.png"
+    "img/sparkling.png"
 )
 bot_image1 = Image.open(
-    "/Users/thomasleung/Documents/GitHub/edustar/Edustar_back_end/streamlit/img/sparkling.png"
+    "img/sparkling.png"
 )
 user_image = Image.open(
-    "/Users/thomasleung/Documents/GitHub/edustar/Edustar_back_end/streamlit/img/woman.png"
+    "img/woman.png"
 )
 # st.image(image, caption='Sunrise by the mountains')
 
