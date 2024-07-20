@@ -7,9 +7,32 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Search from "@/components/Search";
 import ChatButton from "../components/ChatButton";
+import SwipeableCourses from "../components/SwipeableCourses";
+
 import { solveMathProblem } from "@/utils/gpt";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const courses = [
+  {
+    id: "course-1",
+    title: "Course 1",
+    description: "This is the first course.",
+    image: "https://via.placeholder.com/300x200",
+  },
+  {
+    id: "course-2",
+    title: "Course 2",
+    description: "This is the second course.",
+    image: "https://via.placeholder.com/300x200",
+  },
+  {
+    id: "course-3",
+    title: "Course 3",
+    description: "This is the third course.",
+    image: "https://via.placeholder.com/300x200",
+  },
+];
 
 export default function Home() {
   return (
@@ -25,6 +48,7 @@ export default function Home() {
         <div className={styles.grid}>
           <Search />
         </div>
+        <SwipeableCourses courses={courses} />
         <ChatButton />
       </main>
       <Footer />
