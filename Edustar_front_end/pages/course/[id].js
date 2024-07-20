@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import courses from "../../data/courses.json"; // Make sure to place your JSON data in this path
 
 const CoursePage = () => {
   const router = useRouter();

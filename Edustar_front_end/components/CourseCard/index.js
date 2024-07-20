@@ -6,10 +6,14 @@ const CourseCard = ({ course }) => {
   return (
     <Link href={`/course/${course.id}`} passHref>
       <div className={styles.card}>
-        <img src={course.image} alt={course.title} className={styles.image} />
+        <img
+          src={course.course_title_img}
+          alt={course.course_title}
+          className={styles.image}
+        />
         <div className={styles.content}>
-          <h3>{course.title}</h3>
-          <p>{course.description}</p>
+          <h3>{course.course_title}</h3>
+          <p>Organization: {course.course_organization}</p>
         </div>
       </div>
     </Link>
