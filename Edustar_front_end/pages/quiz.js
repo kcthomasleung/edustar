@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/Navbar";
 import Quiz from "@/components/Quiz";
+import ChatButton from "@/components/ChatButton";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
@@ -35,6 +36,7 @@ export default function Home() {
         {showQuiz && <Quiz />}
         {/* </div> */}
       </main>
+      <ChatButton />
       <Footer />
     </>
   );

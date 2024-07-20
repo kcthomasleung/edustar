@@ -4,7 +4,7 @@ import styles from "./search.module.css";
 import { BsFillPeopleFill } from "react-icons/bs";
 // import { solveMathProblem } from "@/utils/gpt";
 import { motion } from "framer-motion";
-
+import CourseCard from "../CourseCard";
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -21,15 +21,20 @@ const Search = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/search/${searchTerm}`, {
-        headers: {
-          'Access-Control-Allow-Origin': 'http://127.0.0.1:8000',
+      const response = await axios.get(
+        `http://127.0.0.1:8000/search/${searchTerm}`,
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "http://127.0.0.1:8000",
+          },
         }
-      });
-  
-      const results = Array.isArray(response.data) ? response.data : [response.data];
+      );
+
+      const results = Array.isArray(response.data)
+        ? response.data
+        : [response.data];
       setSearchResults(results);
-  
+
       // const solutions = await Promise.all(results.map(result => solveMathProblem(result)));
       // setSolution(solutions);
     } catch (error) {
@@ -47,8 +52,6 @@ const Search = () => {
     // setSelectedResult(null);
     // setSelectedOption("");
   };
-
-  
 
   // handleSearch() {
   // solution = await solveMathProblem
@@ -70,23 +73,16 @@ const Search = () => {
       {searchResults.length > 0 && (
         <div className={styles["card-grid"]}>
           {searchResults.map((result, index) => (
-             <motion.div
-             className={styles["card"]}
-             key={index}
-             onClick={() => openModal(result)}
-             variants={cardVariants}
-             initial="initial"
-             whileHover="animate"
-           >
-             <h3>{result.course_title}</h3>
-             <p>{result.course_organization}</p>
-             <p>Rank: {result.course_rating}</p>
-             <p>Difficulty: {result.course_difficulty}</p>
-             <p>
-               {result.course_students_enrolled}{" "}
-               <BsFillPeopleFill />
-             </p>
-           </motion.div>
+            <motion.div
+              className={styles["card"]}
+              key={index}
+              onClick={() => openModal(result)}
+              variants={cardVariants}
+              initial="initial"
+              whileHover="animate"
+            >
+              <CourseCard key={index} course={result} />
+            </motion.div>
           ))}
         </div>
       )}
