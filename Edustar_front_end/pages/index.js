@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 // import { ConnectWallet } from "@thirdweb-dev/react";
+import courses from "../data/courses.json";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Search from "@/components/Search";
@@ -13,26 +14,26 @@ import { solveMathProblem } from "@/utils/gpt";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const courses = [
-  {
-    id: "course-1",
-    title: "Course 1",
-    description: "This is the first course.",
-    image: "https://via.placeholder.com/300x200",
-  },
-  {
-    id: "course-2",
-    title: "Course 2",
-    description: "This is the second course.",
-    image: "https://via.placeholder.com/300x200",
-  },
-  {
-    id: "course-3",
-    title: "Course 3",
-    description: "This is the third course.",
-    image: "https://via.placeholder.com/300x200",
-  },
-];
+// const courses = [
+//   {
+//     id: "course-1",
+//     title: "Course 1",
+//     description: "This is the first course.",
+//     image: "https://via.placeholder.com/300x200",
+//   },
+//   {
+//     id: "course-2",
+//     title: "Course 2",
+//     description: "This is the second course.",
+//     image: "https://via.placeholder.com/300x200",
+//   },
+//   {
+//     id: "course-3",
+//     title: "Course 3",
+//     description: "This is the third course.",
+//     image: "https://via.placeholder.com/300x200",
+//   },
+// ];
 
 export default function Home() {
   return (
