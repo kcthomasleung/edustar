@@ -1,0 +1,83 @@
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .details {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .details h2 {
+    margin-top: 0;
+  }
+  
+  .details p {
+    margin: 8px 0;
+  }
+  
+  .details img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  
+  .details .organization {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .details .organization img {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .details .rating,
+  .details .difficulty,
+  .details .students {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .buyButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .buyButton:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+  }

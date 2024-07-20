@@ -14,6 +14,7 @@ const CourseCard = ({ course }) => {
         <div className={styles.content}>
           <h3>{course.course_title}</h3>
           <p>Organization: {course.course_organization}</p>
+          <p>Ranking: course_rating</p>
         </div>
       </div>
     </Link>

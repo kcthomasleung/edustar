@@ -395,7 +395,7 @@ const MintButton = () => {
           stateMutability: "view",
           type: "function",
         },
-      ]; // replace with contract's ABI
+      ];
       const contractAddress = "0x4EF7d8448A2fb5e51577983c77eDc618f4159BaD";
 
       const contract = new web3.eth.Contract(contractABI, contractAddress);
