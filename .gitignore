@@ -1,2 +1,4 @@
 /AI_Review_ApI/api/
 .DS_Store
+venv
+secrets.toml
