@@ -7,9 +7,8 @@ import json
 import pandas as pd
 
 
-embedder = SentenceTransformer("all-MiniLM-L6-v2")
+embedder = SentenceTransformer('all-MiniLM-L6-v2')
 from transformers import pipeline
-
 sentiment_pipeline = pipeline("sentiment-analysis")
 
 df = pd.read_csv("coursea_data.csv")
@@ -18,7 +17,7 @@ qa = pd.read_csv("qa.csv", header=None)
 corpus = df.iloc[:, 1].to_list()
 corpus_embeddings = embedder.encode(corpus, convert_to_tensor=True)
 
-model = SentenceTransformer("multi-qa-MiniLM-L6-cos-v1")
+model = SentenceTransformer('multi-qa-MiniLM-L6-cos-v1')
 
 
 def review(text):
@@ -38,7 +37,7 @@ def search(text):
         for score, idx in zip(top_results[0], top_results[1]):
             idxs.append(int(idx))
 
-    return json.loads(df.iloc[idxs, :].to_json(orient="records"))
+    return json.loads(df.iloc[idxs,:].to_json( orient='records'))
 
 
 def similarity_check(k, text):
@@ -61,10 +60,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 @app.get("/")
 def read_root():
-    return "Review Api"
+    return 'Review Api'
 
 
 @app.get("/review/{text}")
