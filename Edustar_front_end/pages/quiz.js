@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
-import styles from '@/styles/Home.module.css';
-import Navbar from '@/components/Navbar';
-import Quiz from '@/components/Quiz';
-import Link from 'next/link';
-import Footer from '@/components/Footer';
+import { useState } from "react";
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import Navbar from "@/components/Navbar";
+import Quiz from "@/components/Quiz";
+import Link from "next/link";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [showQuiz, setShowQuiz] = useState(false);
@@ -28,11 +28,11 @@ export default function Home() {
       <Navbar />
       <main className={`${styles.main} ${inter.className}`}>
         {/* <div className={styles.grid}> */}
-          <div className={styles.card} onClick={handleQuizClick}>
-            <h2>Quiz &rarr;</h2>
-            <p>Take a quiz to test your knowledge of the material.</p>
-          </div>
-          {showQuiz && <Quiz />}
+        <div className={styles.card} onClick={handleQuizClick}>
+          <h2>Quiz &rarr;</h2>
+          <p>Take a quiz to test your knowledge of the material.</p>
+        </div>
+        {showQuiz && <Quiz />}
         {/* </div> */}
       </main>
       <Footer />
