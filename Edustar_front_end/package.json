@@ -28,6 +28,7 @@
     "react-feather": "^2.0.10",
     "react-icons": "^4.10.1",
     "react-scroll": "^1.8.9",
+    "react-swipeable": "^7.0.1",
     "torch": "^0.2.7",
     "util": "^0.12.5",
     "web3": "^4.0.1"
