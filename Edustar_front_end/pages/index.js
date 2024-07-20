@@ -6,6 +6,7 @@ import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Search from "@/components/Search";
+import ChatButton from "../components/ChatButton";
 import { solveMathProblem } from "@/utils/gpt";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,6 +25,7 @@ export default function Home() {
         <div className={styles.grid}>
           <Search />
         </div>
+        <ChatButton />
       </main>
       <Footer />
     </>
