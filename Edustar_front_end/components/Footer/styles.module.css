@@ -9,6 +9,11 @@
     /* display: none; */
     margin-bottom: -1rem;
   }
+
+  .rights {
+    justify-content: center;
+    text-align: center;
+  }
   
   .footerContent {
     display: flex;

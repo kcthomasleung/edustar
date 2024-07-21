@@ -5,6 +5,7 @@ import { BsFillPeopleFill } from "react-icons/bs";
 // import { solveMathProblem } from "@/utils/gpt";
 import { motion } from "framer-motion";
 import CourseCard from "../CourseCard";
+
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
