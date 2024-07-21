@@ -98,7 +98,7 @@ import styles from "../Navbar/styles.module.css";
 import { useMediaQuery } from "@mui/material";
 import { ConnectWallet } from "@thirdweb-dev/react";
 
-const Navbar = ({ post }) => {
+const Navbar = ({ setIsTitleClicked, post }) => {
   const router = useRouter();
   const matches = useMediaQuery("(min-width:768px)");
   const [activeTheme, setActiveTheme] = useState("");
@@ -130,6 +130,10 @@ const Navbar = ({ post }) => {
     return detectLink;
   };
 
+  const handleTitleClick = () => {
+    setIsTitleClicked(true);
+  };
+
   const hostname =
     typeof window !== "undefined" &&
     removeTrailingSlash(window.location.pathname)
@@ -159,7 +163,7 @@ const Navbar = ({ post }) => {
       <header className={styles.header}>
         <nav className={styles.wrapper}>
           <ul className={styles.ul}>
-            <Link style={{ fontSize: "1.25rem" }} href="/">
+            <Link style={{ fontSize: "1.25rem" }} href="/" onClick={handleTitleClick}>
               Edustar
             </Link>
             <div className={styles.navLinks}>
