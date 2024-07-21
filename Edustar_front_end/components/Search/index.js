@@ -39,10 +39,10 @@ const Search = ({ setSearchResults }) => {
       const results = Array.isArray(response.data)
         ? response.data
         : [response.data];
-        setSearchResults(results);
-        // if (setSearchResultsLocal) {
-        //   setSearchResults(results);
-        // }
+      setSearchResults(results);
+      // if (setSearchResultsLocal) {
+      //   setSearchResults(results);
+      // }
 
       // console.log(results)
 
@@ -80,14 +80,11 @@ const Search = ({ setSearchResults }) => {
       <button onClick={handleSearch} className={styles["search-button"]}>
         Search
       </button>
-
     </div>
   );
 };
 
 export default Search;
-
-
 
 // import { useState } from "react";
 // import axios from "axios";
@@ -99,7 +96,7 @@ export default Search;
 //   const [showSwipeableCourses, setShowSwipeableCourses] = useState(true);
 
 //   const [searchResults, setSearchResults] = useState([]);
- 
+
 //   const handleInputChange = (event) => {
 //     setSearchTerm(event.target.value);
 //   };

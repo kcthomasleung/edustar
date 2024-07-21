@@ -1,5 +1,5 @@
-import ToggleTheme from '../Theme';
-import styles from './styles.module.css';
+import ToggleTheme from "../Theme";
+import styles from "./styles.module.css";
 
 const Footer = () => {
   return (
@@ -48,12 +48,10 @@ const Footer = () => {
           </ul>
         </div>
         <ToggleTheme />
-
       </div>
-      
-      <span className={styles.toggle}>
-      </span>
 
+      <span className={styles.toggle}></span>
+      <p className="rights">&copy; 2024 Edustar. All rights reserved.</p>
     </footer>
   );
 };
