@@ -60,18 +60,31 @@ const Search = ({ setSearchResults, setIsTitleClicked}) => {
   // }
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search..."
-        value={searchTerm}
-        onChange={handleInputChange}
-        className={styles["search-bar"]}
-      />
-      <button onClick={handleSearch} className={styles["search-button"]}>
-        Search
-      </button>
-    </div>
+    // <div>
+    //   <input
+    //     type="text"
+    //     placeholder="Search..."
+    //     value={searchTerm}
+    //     onChange={handleInputChange}
+    //     className={styles["search-bar"]}
+    //   />
+    //   <button onClick={handleSearch} className={styles["search-button"]}>
+    //     Search
+    //   </button>
+    // </div>
+    <div className={styles["search-container"]}>
+    <input
+      type="text"
+      placeholder="Search..."
+      value={searchTerm}
+      onChange={handleInputChange}
+      className={styles["search-bar"]}
+    />
+    <button onClick={handleSearch} className={styles["search-button"]}>
+      Search
+    </button>
+  </div>
+
   );
 };
 
