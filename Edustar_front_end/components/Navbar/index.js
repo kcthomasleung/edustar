@@ -167,6 +167,9 @@ const Navbar = ({ setIsTitleClicked, post }) => {
               Edustar
             </Link>
             <div className={styles.navLinks}>
+              <Link href="/landing-page">
+                <button className={styles.createCourseButton}>Home</button>
+              </Link>
               <Link href="/create-course">
                 <button className={styles.createCourseButton}>
                   Create Course

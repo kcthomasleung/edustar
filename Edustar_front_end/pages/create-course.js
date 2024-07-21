@@ -114,7 +114,7 @@ const CreateCourse = () => {
             />
           </div>
           <div style={formGroupStyle}>
-            <label htmlFor="price">Course Price (ETH)</label>
+            <label htmlFor="price">Course Price (USD)</label>
             <input
               type="number"
               id="price"
