@@ -45,12 +45,16 @@ import Footer from "@/components/Footer";
 import Search from "@/components/Search";
 import ChatButton from "@/components/ChatButton";
 import SwipeableCourses from "@/components/SwipeableCourses";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const coursesPerPage = 12;
 
 export default function Home() {
+  const [searchResult, setSearchResults] = useState([]);
+  const [allCourses, setAllCourses] = useState(courses);
+
   return (
     <>
       <Head>
@@ -62,9 +66,10 @@ export default function Home() {
       <Navbar />
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.grid}>
-          <Search />
+          <Search setSearchResults={setSearchResults}/>
         </div>
-        <SwipeableCourses courses={courses} coursesPerPage={coursesPerPage} />
+        <SwipeableCourses courses={searchResult.length > 0 ? searchResult : allCourses} coursesPerPage={coursesPerPage} />
+
         <ChatButton />
       </main>
       <Footer />
