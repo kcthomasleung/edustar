@@ -46,7 +46,7 @@ const chatPopupStyle = {
   bottom: "90px",
   right: "20px",
   width: "600px",
-  height: "550px",
+  height: "750px",
   border: "1px solid #ddd",
   borderRadius: "10px",
   boxShadow: "0 4px 8px rgba(0,0,0,0.1)",

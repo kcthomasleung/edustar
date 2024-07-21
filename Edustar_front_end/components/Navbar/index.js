@@ -130,16 +130,15 @@ const Navbar = ({ setIsTitleClicked, post }) => {
     return detectLink;
   };
 
-  const handleTitleClick = () => {
-    setIsTitleClicked(true);
-  };
 
   const hostname =
     typeof window !== "undefined" &&
     removeTrailingSlash(window.location.pathname)
       ? removeTrailingSlash(window.location.pathname)
       : "";
-
+  const handleTitleClick = () => {
+    setIsTitleClicked(true);
+  };
   const [scrollNav, setScrollNav] = useState(false);
 
   const changeNav = () => {
