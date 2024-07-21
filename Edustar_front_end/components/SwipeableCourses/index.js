@@ -60,12 +60,14 @@ import CourseCard from "../CourseCard";
 import styles from "./SwipeableCourses.module.css";
 import { motion } from "framer-motion";
 
+
 const SwipeableCourses = ({ courses, coursesPerPage }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(courses.length / coursesPerPage);
 
   const startIndex = (currentPage - 1) * coursesPerPage;
   const currentCourses = courses.slice(startIndex, startIndex + coursesPerPage);
+
   const cardVariants = {
     initial: { scale: 1 },
     animate: { scale: 1.1 },
