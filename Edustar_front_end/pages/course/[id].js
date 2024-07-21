@@ -23,9 +23,47 @@ const CoursePage = ({ course }) => {
 
       const contractABI = [
         {
-          inputs: [],
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "symbol",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "_mintPrice",
+              type: "uint256",
+            },
+          ],
           stateMutability: "nonpayable",
           type: "constructor",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "owner",
+              type: "address",
+            },
+          ],
+          name: "OwnableInvalidOwner",
+          type: "error",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "account",
+              type: "address",
+            },
+          ],
+          name: "OwnableUnauthorizedAccount",
+          type: "error",
         },
         {
           anonymous: false,
@@ -96,21 +134,34 @@ const CoursePage = ({ course }) => {
           type: "function",
         },
         {
+          inputs: [],
+          name: "mint",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
           anonymous: false,
           inputs: [
             {
               indexed: true,
-              internalType: "uint256",
-              name: "tokenId",
-              type: "uint256",
+              internalType: "address",
+              name: "previousOwner",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
             },
           ],
-          name: "CertMinted",
+          name: "OwnershipTransferred",
           type: "event",
         },
         {
           inputs: [],
-          name: "mintNft",
+          name: "renounceOwnership",
           outputs: [],
           stateMutability: "nonpayable",
           type: "function",
@@ -185,6 +236,19 @@ const CoursePage = ({ course }) => {
           type: "function",
         },
         {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_mintPrice",
+              type: "uint256",
+            },
+          ],
+          name: "setMintPrice",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
           anonymous: false,
           inputs: [
             {
@@ -236,6 +300,26 @@ const CoursePage = ({ course }) => {
           inputs: [
             {
               internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "transferOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "withdraw",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
               name: "owner",
               type: "address",
             },
@@ -271,19 +355,6 @@ const CoursePage = ({ course }) => {
           type: "function",
         },
         {
-          inputs: [],
-          name: "getTokenCounter",
-          outputs: [
-            {
-              internalType: "uint256",
-              name: "",
-              type: "uint256",
-            },
-          ],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
           inputs: [
             {
               internalType: "address",
@@ -309,12 +380,38 @@ const CoursePage = ({ course }) => {
         },
         {
           inputs: [],
+          name: "mintPrice",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
           name: "name",
           outputs: [
             {
               internalType: "string",
               name: "",
               type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
             },
           ],
           stateMutability: "view",
@@ -372,19 +469,6 @@ const CoursePage = ({ course }) => {
           type: "function",
         },
         {
-          inputs: [],
-          name: "TOKEN_URI",
-          outputs: [
-            {
-              internalType: "string",
-              name: "",
-              type: "string",
-            },
-          ],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
           inputs: [
             {
               internalType: "uint256",
@@ -404,11 +488,11 @@ const CoursePage = ({ course }) => {
           type: "function",
         },
       ];
-      const contractAddress = "0x4EF7d8448A2fb5e51577983c77eDc618f4159BaD";
+      const contractAddress = "0x542Fe263eBD65Dddd9B2a3841C0c13530C48dB8d";
 
       const contract = new web3.eth.Contract(contractABI, contractAddress);
 
-      await contract.methods.mintNft().send({ from: accounts[0] });
+      await contract.methods.mint().send({ from: accounts[0] });
 
       setStatus("Minting successful!");
     } catch (err) {
